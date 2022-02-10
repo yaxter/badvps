@@ -16,7 +16,7 @@ BUFLEN = 4096 * 4
 TIMEOUT = 60
 DEFAULT_HOST = '127.0.0.1:22'
 #RESPONSE = 'HTTP/1.1 200 <strong>(<span style="color: #ff0000;"><strong><span style="color: #ff9900;">By</span>-<span style="color: #008000;">VPS</span>-MEX</strong></span>)</strong>\r\nContent-length: 0\r\n\r\nHTTP/1.1 200 conexion exitosa\r\n\r\n'
-RESPONSE = 'HTTP/1.1 101 <strong>'+Banner+'</strong>\r\nContent-length: 0\r\n\r\nHTTP/1.1 101 <strong>'+minBanner+'</strong>\r\n\r\n'
+RESPONSE = 'HTTP/1.1 101 <strong>'+Banner.replace("_"," ")+'</strong>\r\nContent-length: 0\r\n\r\nHTTP/1.1 101 <strong>'+minBanner.replace("_"," ")+'</strong>\r\n\r\n'
 
 class Server(threading.Thread):
     def __init__(self, host, port):
