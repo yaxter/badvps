@@ -16,7 +16,7 @@ else
 	echo $contr > /root/badvps/user/$use
 	echo
 	echo "Usuario agregado"
-	sleep 15
+	sleep 1.5
 	users="$(ls /root/badvps/user)"
 	contra="$(cat /root/badvps/user/$users)"
 	clear
@@ -132,7 +132,7 @@ then
 		apt-get install python3 -y
 		echo
 		echo "Instalacion completa"
-		echo "$(pwd)/badvps/badvps" > /bin/badvps
+		echo "/root/badvps/badvps" > /bin/badvps
 		chmod 777 /bin/badvps
 		chmod 777 PDirect.py
 		echo
