@@ -13,7 +13,7 @@ else
 	read -p 'Usuario: ' use
 	read -p 'Contraseña: ' contr
 	mkdir user
-	echo $contr > user/$use
+	echo $contr > /root/badvps/user/$use
 	echo
 	echo "Usuario agregado"
 	sleep 1.5
