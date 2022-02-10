@@ -16,7 +16,7 @@ else
 	echo $contr > /root/badvps/user/$use
 	echo
 	echo "Usuario agregado"
-	sleep 1.5
+	sleep 15
 	users="$(ls /root/badvps/user)"
 	contra="$(cat /root/badvps/user/$users)"
 	clear
