@@ -206,12 +206,14 @@ then
 			echo
 			read -p 'Banner: ' Banner
 			echo
+			read -p 'sub-Banner: ' subBanner
+			echo
 			read -p 'min-Banner: ' minBanner
 			echo
-			echo "Respuesta del Socket: $Banner $minBanner"
+			echo "Respuesta del Socket: $Banner $subBanner $minBanner"
 			echo
 			echo
-			screen -dmS sockpy python2 PDirect.py $Banner $minBanner
+			screen -dmS sockpy python2 PDirect.py $Banner $subBanner $minBanner
 			echo "Socket activado"
 			sleep 1
 			badvps
