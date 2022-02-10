@@ -255,7 +255,7 @@ def main(host=LISTENING_ADDR, port=LISTENING_PORT):
     print "Listening addr: " + LISTENING_ADDR
     print "Listening port: " + str(LISTENING_PORT) + "\n"
     print ":-------------------------:\n"
-    print "Respuesta: "+Banner+" "+minBanner
+    print "Respuesta: "+Banner.replace("_"," ")+" "+minBanner.replace("_"," ")
     
     server = Server(LISTENING_ADDR, LISTENING_PORT)
     server.start()
