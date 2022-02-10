@@ -157,7 +157,7 @@ then
 		echo "Utilice badvps para ejecutar"
 		sleep 1.5
 		clear
-		./badvps
+		badvps
 	elif [[ $inp == "2" ]]
 	then
 		clear
@@ -186,9 +186,9 @@ then
 			echo
 			echo "Usuario $nom creado"
 			sleep 2
-			./badvps
+			badvps
 		else
-			./badvps
+			badvps
 		fi
 	elif [[ $inp == "3" ]]
 	then
@@ -199,7 +199,7 @@ then
 			echo
 			echo "Socket desactivado"
 			sleep 1
-			./badvps
+			badvps
 
 		else
 			echo "Activacion del Socket"
@@ -214,7 +214,7 @@ then
 			screen -dmS sockpy python2 PDirect.py $Banner $minBanner
 			echo "Socket activado"
 			sleep 1
-			./badvps
+			badvps
 			
 
 		fi
@@ -232,7 +232,7 @@ then
 			echo "SSL DESACTIVADO"
 			sleep 2
 			clear
-			./badvps
+			badvps
 		else
 			echo "ACTIVANDO DE SSL"
 			echo
@@ -260,7 +260,7 @@ then
 			echo "SSL INSTALADO"
 			sleep 2
 			clear
-			./badvps
+			badvps
 		fi
 	elif [[ $inp == "5" ]]
 	then
@@ -274,7 +274,7 @@ then
 			echo "BADVPN DESACTIVADA"
 			sleep 2
 			clear
-			./badvps
+			badvps
 		else
 			echo "ACTIVANDO DE BADVPN"
 			echo
@@ -286,7 +286,7 @@ then
 			echo "BADVPN ACTIVADA"
 			sleep 2
 			clear
-			./badvps
+			badvps
 		fi
 	elif [[ $inp == "0" ]]
 	then 
@@ -295,7 +295,7 @@ then
 		echo "Desconocido"
 		sleep 1
 		clear
-		./badvps
+		badvps
 	fi
 else 
 	echo "Comando desconocido"
