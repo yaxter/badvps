@@ -132,8 +132,9 @@ then
 		apt-get install python3 -y
 		echo
 		echo "Instalacion completa"
-		echo "$(pwd)/badvps" > /bin/badvps
+		echo "/root/badvps/badvps" > /bin/badvps
 		chmod 777 /bin/badvps
+		chmod 777 PDirect.py
 		echo
 		sleep 1
 		
