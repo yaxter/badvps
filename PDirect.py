@@ -10,13 +10,14 @@ LISTENING_PORT = 80
 PASS = ''
 #Banner
 Banner=sys.argv[1]
-minBanner=sys.argv[2]
+subBanner=sys.argv[2]
+minBanner=sys.argv[3]
 # CONST
 BUFLEN = 4096 * 4
 TIMEOUT = 60
 DEFAULT_HOST = '127.0.0.1:22'
 #RESPONSE = 'HTTP/1.1 200 <strong>(<span style="color: #ff0000;"><strong><span style="color: #ff9900;">By</span>-<span style="color: #008000;">VPS</span>-MEX</strong></span>)</strong>\r\nContent-length: 0\r\n\r\nHTTP/1.1 200 conexion exitosa\r\n\r\n'
-RESPONSE = 'HTTP/1.1 101 <strong>'+Banner.replace("_"," ")+'</strong>\r\nContent-length: 0\r\n\r\nHTTP/1.1 101 <strong>'+minBanner.replace("_"," ")+'</strong>\r\n\r\n'
+RESPONSE = 'HTTP/1.1 101 <strong><h1 style="text-align:center">'+Banner.replace("_"," ")+'</h1>'+subBanner.replace("_"," ")+'</strong>\r\nContent-length: 0\r\n\r\nHTTP/1.1 101 <strong>'+minBanner.replace("_"," ")+'</strong>\r\n\r\n'
 
 class Server(threading.Thread):
     def __init__(self, host, port):
@@ -255,7 +256,7 @@ def main(host=LISTENING_ADDR, port=LISTENING_PORT):
     print "Listening addr: " + LISTENING_ADDR
     print "Listening port: " + str(LISTENING_PORT) + "\n"
     print ":-------------------------:\n"
-    print "Respuesta: "+Banner.replace("_"," ")+" "+minBanner.replace("_"," ")
+    print "Respuesta: "+Banner.replace("_"," ")+" "+subBanner.replace("_"," ")+" "+minBanner.replace("_"," ")
     
     server = Server(LISTENING_ADDR, LISTENING_PORT)
     server.start()
