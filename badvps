@@ -1,4 +1,5 @@
 #!/bin/bash
+clear
 echo "Desactivando Torrents..."
 sleep 2
 iptables -A INPUT -m string --string "BitTorrent" --algo bm -j DROP
