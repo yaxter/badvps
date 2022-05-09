@@ -273,7 +273,7 @@ then
 			echo
 			kill -9 $(ps x | grep badvpn | grep -v grep | awk '{print $1'}) > /dev/null 2>&1
 			killall badvpn-udpgw > /dev/null 2>&1
-			rm /bin/badvpn-udpgw 2>/dev/null
+			
 			echo "BADVPN DESACTIVADA"
 			sleep 2
 			clear
