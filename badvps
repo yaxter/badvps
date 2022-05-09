@@ -282,10 +282,10 @@ then
 			echo "ACTIVANDO DE BADVPN"
 			echo
 
-			wget -O /bin/badvpn-udpgw https://www.dropbox.com/s/z6hm10p3307un5m/badvpn-udpgw &>/dev/null
-			chmod 777 /bin/badvpn-udpgw
+			#wget -O /bin/badvpn-udpgw https://www.dropbox.com/s/z6hm10p3307un5m/badvpn-udpgw &>/dev/null
+			chmod 777 /root/badvps/badvpn-udpgw
 
-			screen -dmS badvpn2 /bin/badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 1000 --max-connections-for-client 10 
+			screen -dmS badvpn2 /root/badvps/badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 1000 --max-connections-for-client 10 
 			echo "BADVPN ACTIVADA"
 			sleep 2
 			clear
