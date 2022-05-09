@@ -134,6 +134,7 @@ then
 	echo "[3] Socket			  $pysocket"
 	echo "[4] SSL				  $stunel"
 	echo "[5] BadVpn			  $bdvpn"
+	echo "[6] Reset"
 	echo "[0] Salir"
 	echo
 	read -p 'Opcion: ' inp
@@ -306,6 +307,12 @@ then
 			clear
 			badvps
 		fi
+	elif [[ $inp == "6" ]]
+	then
+		rm -r /root/badvps/
+		cd /root/
+		git clone https://github.com/yaxter/badvps; cd badvps; chmod 777 badvps && ./badvps
+		
 	elif [[ $inp == "0" ]]
 	then 
 		exit
